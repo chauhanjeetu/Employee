@@ -1,0 +1,217 @@
+========================== Build CLI Commands ============================
+git stash
+git stash pop
+git pull origin develop
+git branch -a
+
+https://www.youtube.com/watch?v=e3bjQX9jIBk (GIT HUB)
+
+ng build --dev/prod -sm false/true	(include/exclude Source Map  - Easy to debug code)
+
+- Minification & Uglification process (Remove Extra whitespace,comments and option {} and ;
+
+- Tree shaking ( remove code which is not actually used in application)
+
+
+
+
+------------------------ CLI Build Commands --------------------------
+https://www.youtube.com/watch?v=GfeUrQ-xQN4
+
+
+-------------------------------GIT commands --------------------
+https://www.youtube.com/watch?v=b5oQZdzA37I
+https://www.youtube.com/watch?v=b5oQZdzA37I&index=4&list=PL9ooVrP1hQOGwtQOt8ZBlVjFlI-9Vr5hx 
+https://www.youtube.com/watch?v=41tsyReTloA&index=2&list=PL9ooVrP1hQOGwtQOt8ZBlVjFlI-9Vr5hx
+https://www.youtube.com/watch?v=HVsySz-h9r4 (Important - Must Watch)
+
+======================= Deploy the code on Live Server =============
+https://www.youtube.com/watch?v=ikUd9i8d4mI
+
+
+
+
+
+Sql Server:  2014
+Angular 4.0
+.net framework   4.5.2
+
+IIS :
+Assure : VM
+
+****************************** Start - points to be noted to set-up code on system **************************
+Points:
+ - Remove logger from GIT (Discuss with out-source Team)
+
+Step1: rename ng_module folder
+Step2: npm install  (if module error coming while building)
+Step3: Go to below file location according to developer local workspace and change cryto tag in browser.js file
+
+File location:
+C:\Users\rishi\Source\GIT_Repo\ForsaAngular\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\webpack-configs
+
+File to be changed
+browser.js 
+
+
+****************************** End- points to be noted to set-up code on system **************************
+
+
+
+
+----------------------------Local Repository ----------------
+C:\Users\rishi\Source\Git_Repo
+
+(GIT URL)
+https://github.com/Team-Elite/ForsaAngular.git
+https://github.com/Team-Elite/ForsaApiVar.git
+
+----https://github.com/Team-Elite/ForsasignalR.git  (Only for R&D)
+
+
+
+--------------------------Database Details---------------------------
+SQL Server: 40.89.139.123 (UAT)
+DataBase: ForsaWeb
+userId: sa/forsaweb^123
+n
+
+SQL Server: 40.89.169.211 (Development)
+DataBase: ForsaWeb
+userId: sa/forsaweb^123
+----App user---
+Mainz/London01
+StadtSingen/London01
+
+WEB API
+http://40.118.108.209:4043/api/Login/ValidateUser
+
+
+
+{
+  "data": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyTmFtZSI6Ik1haW56IiwiRm9yZ290UGFzc3dvcmRFbWFpbElkIjoiIiwiQ2FwdGNoYWlucHV0IjoiODk0OSIsIlVzZXJQYXNzd29yZCI6IkxvbmRvbjAxIiwiTG9naW5UaW1lIjoiMjAxOC0xMi0yN1QwNzo1NTowMy4wMDZaIn0.bakwG5eYln4XqrZTkNIhRHD4lVWicrju1SxJhsX4xMM"
+}
+
+
+{
+  "data": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyTmFtZSI6Ik1haW56IiwiRm9yZ290UGFzc3dvcmRFbWFpbElkIjoiIiwiQ2FwdGNoYWlucHV0IjoiODk0OSIsIlVzZXJQYXNzd29yZCI6IkxvbmRvbjAxIiwiTG9naW5UaW1lIjoiMjAxOC0xMi0yN1QwNzo1NTowMy4wMDZaIn0.bakwG5eYln4XqrZTkNIhRHD4lVWicrju1SxJhsX4xMM"
+}
+
+{
+  "data": 
+"'2018-12-31 17:34:32','17:34','4500.25','2018-12-31 17:34:32','2018-12-31 17:34:32','2018-12-31 17:34:32', '1,2',false,1"
+}
+
+
+Method 1: 
+http://40.113.123.57:4043/api/Tender/TenderSaveData
+	
+The following data Type need to pass
+@TenderDate datetime,
+@TenderTime time,
+@TenderAmount money,
+@TenderValueDate datetime,
+@TenderMaturityDate datetime,
+@TenderAlternativeMaturityDate datetime,
+@TenderBanks varchar(50),
+@TenderReminderEmail bit,
+@CreatedBy int
+
+DB Store Procedure used (Data Sample)
+USP_SaveTenderData '2018-12-31 17:34:32','17:34','4500.25','2018-12-31 17:34:32','2018-12-31 17:34:32','2018-12-31 17:34:32', '1,2',false,1
+
+
+Method 2: 
+http://40.113.123.57:4043/api/Tender/TenderSaveEmailData
+
+The following data Type need to pass
+@EmailFrom nvarchar(100),
+@EmailTo nvarchar(500),
+@EmailSubject nvarchar(300),
+@EmailMessage nvarchar(max),
+@IsSent bit,
+@CreatedBy int	
+
+DB Store Procedure used (Data Sample)
+USP_SaveTenderEmailData 'test@abc.com','test@abc.com, QA@abc.com','Test Email','Test email sent successfully',true,1
+
+Method 3: (working on that - Display following data on drop-down)
+1	Mainz  Bank
+9	Evangelische Hochschule Ludwigsburg
+
+
+DB used
+Server	40.89.169.211
+Database	ForsaWeb
+User		sa
+Password	forsaweb^123
+
+
+
+
+=========================== Start -WebMob Development Server =====================
+RDP    - 40.118.108.209
+user: Forsa
+pwd: ForsaWebmob@123
+
+=========================== End - WebMob Development Server =====================
+
+
+
+-------------------------Application URL --------------------
+http://forsa.elitewebdemo.com/ForsaWebApp/
+
+
+
+
+
+****************************** Fix GIT Issues ************************
+git checkout -- <file_path>
+git pull origin gitBranchName
+notepad.exe .gitignore
+npm i mydatepicker   (resolve --cannot find module)
+
+
+  ************************AngularApps:
+- Signal Host URL (Three files):
+const connection = (environment.production) ? hubConnection('http://40.118.108.209:4044') : hubConnection('http://localhost:50859');
+
+
+- BaseURL:
+ baseURL: string = (environment.production) ? 'http://40.118.108.209:4043' : 'http://localhost:60744';
+
+************************ WebAPI Changes for DB *****************
+
+<connectionStrings>
+    <add name="ForsaDBConnection" connectionString="data source=40.89.169.211;initial catalog=forsaweb;user id=sa;password=forsaweb^123; Max Pool Size=5000;" providerName="System.Data.SqlClient" />
+    <add name="ForsaEntities" connectionString="metadata=res://*/Persistance.Data.ForsaDatamodel.csdl|res://*/Persistance.Data.ForsaDatamodel.ssdl|res://*/Persistance.Data.ForsaDatamodel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=40.89.169.211;initial catalog=forsaweb;user id=sa;password=forsaweb^123;max pool size=5000;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+
+
+******************************* Socket changes for DB **********************
+ <connectionStrings>
+    <add name="forsawebEntities" connectionString="metadata=res://*/Data.ForsawebModel.csdl|res://*/Data.ForsawebModel.ssdl|res://*/Data.ForsawebModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=40.89.169.211;initial catalog=forsaweb;persist security info=True;user id=sa;password=forsaweb^123;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+
+ 40.112.89.132
+
+forsaweb^123
+
+
+========================= IIS Serevr  ==================================
+step1 : whilte list port 43, 4043, 4044 on azzure server
+Check on https://hackertarget.com/nmap-online-port-scanner/
+
+Step2: Add Inout and Outbound on VM machine
+Step3 : Check for Asp.net framework and IIS web Server component in IIS Server
+Step4: Full Access to WebAPI & Socket folder in wwwroot  (IIS User, everybody)
+
+
+data=[{"UserId":1,"NameOfCompany":"Mainz  Bank","Street":"Hauptstrasse 14","PostalCode":"Post","Place":"Chd","AccountHolder":"","Bank":"Mainz","IBAN":"1234","BICCode":"1234","GroupIds":"2,3,4","SubGroupId":null,"LEINumber":"1231333","FurtherField4":"123123","Salutation":1,"Title":"Dr.","FirstName":"Maiz","SurName":"Bank","ContactNumber":"7987987798","EmailAddress":"parul@webmobsoft.com","UserName":"Mainz","FurtherField1":null,"FurtherField2":null,"FurtherField3":null,"UserTypeId":"4","RatingAgentur1":"1","RatingAgenturValue1":"5","RatingAgentur2":"2","RatingAgenturValue2":"4","DepositInsurance":2,"DepositInsuranceAmount":0.00,"ClientGroupId":2,"AgreeToThePrivacyPolicy":true,"AgreeToTheRatingsMayPublish":true,"AgreeThatInformationOfCompanyMayBePublished":true,"AcceptAGBS":true,"DateCreated":"2018-12-17T11:33:23.457","DateModified":"2018-12-17T11:33:23.457","ModifiedBy":-1}]
+
+
+PM> Install-Package Microsoft.AspNet.Cors -version 5.2.6
+PM> Install-Package Microsoft.AspNet.WebApi.Core -version 5.2.6
+Install-Package Microsoft.System.Web.Http.Cors -version 5.2.6
+
+
